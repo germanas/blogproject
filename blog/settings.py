@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'blog',
-        'USER': 'root',
-        'PASSWORD': 'langas',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'germanas$blog',
+        'USER': 'germanas',
+        'PASSWORD': 'langas123',
+        'HOST': 'germanas.mysql.pythonanywhere-services.com',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
