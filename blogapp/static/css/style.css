@@ -9,7 +9,11 @@
     font-size: 36pt;
     text-decoration: none;
 }
+h2, h2 a {
 
+    font-family: 'Open Sans';
+    font-size: 13px;
+}
 .content {
 
 }
