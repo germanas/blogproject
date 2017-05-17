@@ -25,7 +25,7 @@ SECRET_KEY = '((39iwt)p*iybeg!7=tsa$g9)o!%s!#ha=c#763q-p@5(14$&e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'localhost']
 
 
 # Application definition
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'germanas$blog',
-        'USER': 'germanas',
-        'PASSWORD': 'langas123',
-        'HOST': 'germanas.mysql.pythonanywhere-services.com',   # Or an IP Address that your DB is hosted on
+        'NAME': 'blog',
+        'USER': 'root',
+        'PASSWORD': 'langas',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
