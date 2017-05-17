@@ -22,6 +22,7 @@
             <div class="content container">
     <div class="row">
 
+
         <div class="col-md-10">
             {% for post in posts %}
                 <div class="post">
@@ -43,6 +44,12 @@
 
                 </div>
             {% endfor %}
+            {% load wysiwyg %}
+{% wysiwyg_setup %}
+
+<textarea id="foo"></textarea>
+
+{% wysiwyg_editor "foo" %}
 
         </div>
     </div>
