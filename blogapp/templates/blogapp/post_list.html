@@ -21,6 +21,12 @@
         <div>
             <div class="content container">
     <div class="row">
+    {% load wysiwyg %}
+{% wysiwyg_setup %}
+
+<textarea id="foo"></textarea>
+
+{% wysiwyg_editor "foo" %}
 
         <div class="col-md-10">
             {% for post in posts %}
