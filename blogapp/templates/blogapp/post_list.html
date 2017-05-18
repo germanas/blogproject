@@ -9,6 +9,9 @@
                         <p>published: {{ post.published_date }}</p>
                         <p>created: {{ post.created_date }}</p>
                     </div>
+                        {% for i in post.get_tag_list %}
+                            <a>{{i}}</a>
+                        {% endfor %}
                     <p>{{ post.text|linebreaksbr|truncatewords_html:20 }}</p>
                 </div>
             {% endfor %}
@@ -20,6 +23,9 @@
                     <h2><a href="">{{ post.title }}</a></h2>
 
                 </div>
+
+                </div>
             {% endfor %}
+
         {% endautoescape %}
 {% endblock %}

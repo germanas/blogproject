@@ -8,7 +8,15 @@
             </div>
         {% endif %}
         <h1>{{ post.title }}</h1>
+
         <p>{{ post.text|linebreaksbr }}</p>
+
+     {% for i in post.get_tag_list %}
+         <a>{{i}}</a>
+     {% endfor %}
+
     </div>
      {% endautoescape %}
+
+
 {% endblock %}
