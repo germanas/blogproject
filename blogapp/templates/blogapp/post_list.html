@@ -9,9 +9,11 @@
                         <p>published: {{ post.published_date }}</p>
                         <p>created: {{ post.created_date }}</p>
                     </div>
-                        {% for i in post.get_tag_list %}
-                            <a>{{i}}</a>
-                        {% endfor %}
+                        <div class="tag_container">
+                            {% for i in post.get_tag_list %}
+                                <div class="tag">{{i}}</div>
+                            {% endfor %}
+                        </div>
                     <p>{{ post.text|linebreaksbr|truncatewords_html:20 }}</p>
                 </div>
             {% endfor %}

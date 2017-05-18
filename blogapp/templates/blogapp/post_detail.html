@@ -10,11 +10,11 @@
         <h1>{{ post.title }}</h1>
 
         <p>{{ post.text|linebreaksbr }}</p>
-
+<div class="tag_container">
      {% for i in post.get_tag_list %}
-         <a>{{i}}</a>
+         <div class="tag">{{i}}</div>
      {% endfor %}
-
+</div>
     </div>
      {% endautoescape %}
 

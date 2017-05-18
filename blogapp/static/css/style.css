@@ -52,3 +52,11 @@ p{
     color: #000000;
     font-family: 'Bitter', serif;
 }
+/*.tag_container{*/
+    /*width:100px;*/
+    /*float: left;*/
+/*}*/
+.tag{
+    display: inline-block;
+    color:rebeccapurple;
+}
