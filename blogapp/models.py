@@ -2,12 +2,12 @@
 from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
-from django.contrib import admin
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     text = RichTextField()
+    tags = models.ArrayField()
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
@@ -20,14 +20,3 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-class Tags(models.Model):
-   post = models.ForeignKey(Post, related_name='tags')
-   tags = models.TextField()
-
-class TagsInline(admin.StackedInline):
-    model = Tags
-
-class TagsAdmin(admin.ModelAdmin):
-    inlines = [
-        TagsInline,
-    ]

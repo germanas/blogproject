@@ -1,7 +1,7 @@
 from django.contrib import admin
-from blogapp.models import Post, TagsAdmin
+from blogapp.models import Post
 
 
 
-admin.site.register(Post, TagsAdmin)
+admin.site.register(Post)
 
