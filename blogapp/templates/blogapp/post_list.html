@@ -1,6 +1,8 @@
 {% extends 'blogapp/base.html' %}
 {% block content %}
+
         {% autoescape off %}
+            <div class="col-md-8">
             {% for post in posts %}
                 <div class="post">
 
@@ -17,6 +19,7 @@
                 </div>
             {% endfor %}
         </div>
+
         <div class="col-md-2">
 
             {% for post in posts %}
@@ -24,7 +27,7 @@
                     <h2><a href="">{{ post.title }}</a></h2>
 
                 </div>
-
+        </div>
 
             {% endfor %}
 

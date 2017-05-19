@@ -1,21 +1,24 @@
 {% extends 'blogapp/base.html' %}
 {% block content %}
+    <div class="col-md-12">
     {% autoescape off %}
     <div class="post">
+         <h1>{{ post.title }}</h1>
         {% if post.published_date %}
             <div class="date">
-                {{ post.published_date }}
-            </div>
+                        <p>published: {{ post.published_date }}</p>
+                    </div>
         {% endif %}
-        <h1>{{ post.title }}</h1>
-
-        <p>{{ post.text|linebreaksbr }}</p>
 <div class="tag_container">
      {% for i in post.get_tag_list %}
          <div class="tag">{{i}}</div>
      {% endfor %}
 </div>
+
+        <p>{{ post.text|linebreaksbr }}</p>
+
     </div>
+        </div>
      {% endautoescape %}
 
 
