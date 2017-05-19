@@ -76,3 +76,10 @@ p{
 	-webkit-border-top-left-radius:4px;
 	border-top-left-radius:4px;
 }
+.tag a {
+    color:white;
+
+}
+.tag a:hover{
+    text-decoration: none;
+}

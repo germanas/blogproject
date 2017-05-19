@@ -12,7 +12,7 @@
                     </div>
                         <div class="tag_container">
                             {% for i in post.get_tag_list %}
-                                <div class="tag">{{i}}</div>
+                                <div class="tag"><a href="">{{i}}</a></div>
                             {% endfor %}
                         </div>
                     <p>{{ post.text|linebreaksbr|truncatewords_html:20 }}</p>
