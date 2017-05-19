@@ -15,13 +15,12 @@ class Post(models.Model):
             blank=True, null=True)
 
     def get_tag_list(self):
-        return re.split(" ", self.tags)
+        return re.split(",", self.tags)
 
     def publish(self):
         self.published_date = timezone.now()
         self.save()
-    def get_absolute_url(self):
-        return reverse("posts:detail", kwargs={"slug": self.slug})
+
 
     def __str__(self):
         return self.title
