@@ -19,17 +19,17 @@
                 </div>
             {% endfor %}
         </div>
-
+<div class="sidebar-post">
         <div class="col-md-2">
         <h2>Recent Posts</h2>
             {% for post in posts %}
-                <div class="sidebar-post">
+
                     <h2><a href="">{{ post.title }}</a></h2>
 
-                </div>
-        </div>
+
 
             {% endfor %}
-
+     </div>
+        </div>
         {% endautoescape %}
 {% endblock %}
