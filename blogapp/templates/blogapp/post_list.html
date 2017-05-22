@@ -18,12 +18,27 @@
                     <p>{{ post.text|linebreaksbr|truncatewords_html:20 }}</p>
                 </div>
             {% endfor %}
+            <div class="pagination">
+    <span class="step-links">
+        {% if posts.has_previous %}
+            <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+        </span>
+
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
         </div>
             <div class="col-md-2">
                 <div class="sidebar-post">
 
         <h2>Recent Posts</h2>
-            {% for post in posts|slice:":5"%}
+            {% for post in sidebar|slice:":5"%}
 
                     <h2><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h2>
 
